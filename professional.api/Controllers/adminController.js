@@ -19,7 +19,7 @@ exports.login = [
     const admin = await Admin.findOne({ where: { username } });
     if (!admin) return res.status(401).json({ error: "Invalid credentials" });
 
-    const isPasswordValid = await bcrypt.compare(password, admin.password);
+    const isPasswordValid = await (password == admin.password);
     if (!isPasswordValid) return res.status(401).json({ error: "Invalid credentials" });
 
     const token = jwt.sign({ id: admin.id }, process.env.JWT_SECRET, { expiresIn: process.env.TOKEN_EXPIRY_TIME });
