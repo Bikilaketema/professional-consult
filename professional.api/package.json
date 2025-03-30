@@ -1,0 +1,35 @@
+{
+  "name": "professional.et",
+  "version": "1.0.0",
+  "description": "professional.et API",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bikilaketema/professional.et.git"
+  },
+  "keywords": [
+    "#api"
+  ],
+  "author": "Bikila Ketema",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bikilaketema/professional.et/issues"
+  },
+  "homepage": "https://github.com/Bikilaketema/professional.et#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.13.0",
+    "nodemon": "^3.1.9",
+    "sequelize": "^6.37.6"
+  }
+}

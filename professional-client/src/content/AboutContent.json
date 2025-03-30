@@ -1,0 +1,16 @@
+{
+  "title": "About Us",
+  "text": "Professional Educational Consultancy and Training Services ",
+  "section": [
+    {
+      "title": "Vision",
+      "content": "To envisage competent and entrepreneur generation. ",
+      "icon": "notes.svg"
+    },
+    {
+      "title": "Mission",
+      "content": "To provide consultancy and training  services in all areas  to have competent and entrepreneur generation.",
+      "icon": "notes.svg"
+    }
+  ]
+}

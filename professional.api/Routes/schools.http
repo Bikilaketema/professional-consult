@@ -1,0 +1,42 @@
+### Get all schools
+GET http://localhost:3001/api/schools
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQzMzY4MjUzLCJleHAiOjE3NDMzNzE4NTN9.Ks2V88AenDi3kj_sj4Uf_z7_Pe7_YQidS4YDHrUICjM
+
+###
+
+### Create a new school
+POST http://localhost:3000/api/schools
+Content-Type: application/json
+
+{
+    "schoolName": "Green Valley High",
+    "gradeLevel": "High School",
+    "subjectsNeeded": ["Math", "Science", "English"],
+    "numberOfTeachersNeeded": 10,
+    "trainingType": "In-person",
+    "phoneNumber": "0942932231"
+}
+
+###
+
+### Update a school
+PATCH http://localhost:3000/api/schools/4
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQyMzk0NDA4LCJleHAiOjE3NDIzOTgwMDh9.Ho18DSgdWncSpc_HraDYxgja5MoqNGsSXo8qGl0mpsY
+
+{
+    "schoolName": "Green Valley High Updated",
+    "gradeLevel": "High School",
+    "subjectsNeeded": ["Math", "Science", "English", "History"],
+    "numberOfTeachersNeeded": 12,
+    "trainingType": "Online",
+    "phoneNumber": "987-654-3210"
+}
+
+###
+
+### Delete a school
+DELETE http://localhost:3000/api/schools/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQyMzk0NDA4LCJleHAiOjE3NDIzOTgwMDh9.Ho18DSgdWncSpc_HraDYxgja5MoqNGsSXo8qGl0mpsY

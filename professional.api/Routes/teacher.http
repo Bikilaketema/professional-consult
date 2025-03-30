@@ -1,0 +1,39 @@
+### Get all teachers
+GET http://localhost:3001/api/teachers
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQzMzY4MjUzLCJleHAiOjE3NDMzNzE4NTN9.Ks2V88AenDi3kj_sj4Uf_z7_Pe7_YQidS4YDHrUICjM
+
+
+### Create a new teacher
+POST http://localhost:3000/api/teachers
+Content-Type: application/json
+
+{
+    "fname": "John",
+    "mname": "Doe",
+    "lname": "Smith",
+    "subject": "Mathematics",
+    "zone": "Zone 1",
+    "town": "Townsville",
+    "phoneNumber": "0942932231"
+}
+
+### Update a teacher
+PATCH http://localhost:3000/api/teachers/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQyMzk0NDA4LCJleHAiOjE3NDIzOTgwMDh9.Ho18DSgdWncSpc_HraDYxgja5MoqNGsSXo8qGl0mpsY
+
+{
+    "fname": "John Updated",
+    "mname": "Doe Updated",
+    "lname": "Smith Updated",
+    "subject": "Physics",
+    "zone": "Zone 2",
+    "town": "New Townsville",
+    "phoneNumber": "987-654-3210"
+}
+
+### Delete a teacher
+DELETE http://localhost:3000/api/teachers/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQyMzk0NDA4LCJleHAiOjE3NDIzOTgwMDh9.Ho18DSgdWncSpc_HraDYxgja5MoqNGsSXo8qGl0mpsY
