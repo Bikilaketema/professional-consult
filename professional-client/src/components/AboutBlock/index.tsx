@@ -12,7 +12,7 @@ const AboutBlock = ({ t, id }: AboutBlockProps) => {
       <Fade direction="up" triggerOnce>
         <div className="max-w-6xl mx-auto text-center">
           <h6 className="">{t("About Us")}</h6>
-          <p className="text-lg text-gray-700 mb-6">{t("Professional Educational Consultancy and Training Services")}</p>
+          <p className="text-lg text-primary mb-6">{t("Professional Educational Consultancy and Training Services")}</p>
           
           {/* Content without iteration */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 mt-6">

@@ -26,7 +26,7 @@ const ServicesBlock = ({ t, id }: ServicesBlockProps) => {
           <div className="text-left">
 
             <h6 className="text-2xl font-semibold mb-2">{t("Job Opportunities")}</h6>
-            <ul className="list-disc list-inside text-lg text-gray-700">
+            <ul className="list-disc list-inside text-lg text-primary">
               <li className="mb-2">{t("for Preschool Teachers")}</li>
               <li className="mb-2">{t("for Grade 1-8 Teachers")}</li>
               <li className="mb-2">{t("for Grade 9-12 Teachers")}</li>
@@ -34,7 +34,7 @@ const ServicesBlock = ({ t, id }: ServicesBlockProps) => {
             </ul>
 
             <h6 className="text-2xl font-semibold mt-6 mb-2">{t("Training Courses")}</h6>
-            <ul className="list-disc list-inside text-lg text-gray-700">
+            <ul className="list-disc list-inside text-lg text-primary">
               <li className="mb-2">{t("Pedagogical")}</li>
               <li className="mb-2">{t("Psychological")}</li>
               <li className="mb-2">{t("Language")}</li>
