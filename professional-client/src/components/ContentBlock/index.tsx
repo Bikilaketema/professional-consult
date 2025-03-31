@@ -50,7 +50,7 @@ const ContentBlock = ({
               <h6>{t(title)}</h6>
               <Content>{t(content)}</Content>
               {direction === "right" ? (
-                <ButtonWrapper>
+                <div className="flex justify-center items-center mt-4">
                   {typeof button === "object" &&
                     button.map(
                       (
@@ -71,7 +71,7 @@ const ContentBlock = ({
                         );
                       }
                     )}
-                </ButtonWrapper>
+                </div>
               ) : (
                 <ServiceWrapper>
                   <Row justify="space-between">

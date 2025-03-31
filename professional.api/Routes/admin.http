@@ -1,5 +1,5 @@
 ### Test Admin Login - Successful Login
-POST http://localhost:3000/api/admin/login
+POST https://gutu.bikilaketema.com/api/admin/login
 Content-Type: application/json
 
 {

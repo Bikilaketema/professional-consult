@@ -66,11 +66,11 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 />
                 <ValidationType type="message" />
               </Col>
-              <ButtonContainer>
+              <div className="flex items-center justify-center mt-4">
                 <button className="rounded-lg bg-primary p-4 text-white font-bold" type="submit" name="submit">
                   {t("Submit")}
                 </button>
-              </ButtonContainer>
+              </div>
             </FormGroup>
           </Slide>
         </Col>

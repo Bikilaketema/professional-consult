@@ -1,5 +1,5 @@
 ### Get all teachers
-GET http://localhost:3001/api/teachers
+GET https://gutu.bikilaketema.com/api/teachers
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQzMzY4MjUzLCJleHAiOjE3NDMzNzE4NTN9.Ks2V88AenDi3kj_sj4Uf_z7_Pe7_YQidS4YDHrUICjM
 

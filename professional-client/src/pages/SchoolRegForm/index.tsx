@@ -76,29 +76,29 @@ const SchoolRegistrationForm: React.FC = () => {
   return (
     <div className="flex justify-center items-center min-h-screen bg-gray-100 px-4">
       <div className="w-full max-w-lg bg-white p-8 shadow-md rounded-lg relative">
-        <h2 className="text-2xl font-bold mb-6 text-center text-gray-700">Register School</h2>
+        <h2 className="text-2xl font-bold mb-6 text-center text-primary">Register School</h2>
 
         {error && <p className="text-red-500 text-center">{error}</p>}
 
         <form onSubmit={handleSubmit} className="space-y-4">
-          <input type="text" name="schoolName" value={formData.schoolName} onChange={handleChange} placeholder="School Name" required className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none" />
+          <input type="text" name="schoolName" value={formData.schoolName} onChange={handleChange} placeholder="School Name" required className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary outline-none" />
 
-          <select name="gradeLevel" value={formData.gradeLevel} onChange={handleChange} required className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none">
+          <select name="gradeLevel" value={formData.gradeLevel} onChange={handleChange} required className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary outline-none">
             <option value="" disabled>Select Grade Level</option>
             {gradeLevels.map(level => (
               <option key={level} value={level}>{level}</option>
             ))}
           </select>
 
-          <input type="text" name="subjectsNeeded" value={formData.subjectsNeeded} onChange={handleChange} onBlur={handleBlur} placeholder="Subjects Needed (Comma separated)" required className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none" />
+          <input type="text" name="subjectsNeeded" value={formData.subjectsNeeded} onChange={handleChange} onBlur={handleBlur} placeholder="Subjects Needed (Comma separated)" required className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary outline-none" />
 
-          <input type="number" name="numberOfTeachersNeeded" value={formData.numberOfTeachersNeeded} onChange={handleChange} placeholder="Number of Teachers Needed" required className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none" />
+          <input type="number" min="1" name="numberOfTeachersNeeded" value={formData.numberOfTeachersNeeded} onChange={handleChange} placeholder="Number of Teachers Needed" required className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary outline-none" />
 
-          <input type="text" name="trainingType" value={formData.trainingType} onChange={handleChange} placeholder="Training Type" required className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none" />
+          <input type="text" name="trainingType" value={formData.trainingType} onChange={handleChange} placeholder="Training Type" required className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary outline-none" />
 
-          <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Phone Number" required className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 outline-none" />
+          <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} placeholder="Phone Number" required className="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-primary outline-none" />
 
-          <button type="submit" disabled={loading} className="w-full bg-blue-600 text-white p-3 rounded-md hover:bg-blue-700 transition-all">
+          <button type="submit" disabled={loading} className="w-full bg-primary text-white p-3 rounded-md hover:bg-secondary transition-all">
             {loading ? "Registering..." : "Register"}
           </button>
         </form>
