@@ -38,7 +38,7 @@ const TeacherRegistrationForm: React.FC = () => {
     setSuccess(false);
 
     try {
-      await axios.post("http://localhost:3001/api/teachers", formData);
+      await axios.post("https://gutu.bikilaketema.com/api/teachers", formData);
       setSuccess(true);
       setFormData({
         fname: "",

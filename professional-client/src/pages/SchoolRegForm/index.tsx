@@ -53,7 +53,7 @@ const SchoolRegistrationForm: React.FC = () => {
     setSuccess(false);
 
     try {
-      await axios.post("http://localhost:3001/api/schools", {
+      await axios.post("https://gutu.bikilaketema.com/api/schools", {
         ...formData,
         subjectsNeeded: formData.subjectsNeeded.split(",").map(subject => subject.trim()),
       });
