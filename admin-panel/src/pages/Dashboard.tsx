@@ -33,8 +33,15 @@ const Dashboard = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      setSchools(await getSchools(token!));
-      setTeachers(await getTeachers(token!));
+      const schoolsData = await getSchools(token!);
+      const parsedSchools = schoolsData.map((school: any) => ({
+        ...school,
+        subjectsNeeded: school.subjectsNeeded ? JSON.parse(school.subjectsNeeded) : [], // Parse subjectsNeeded
+      }));
+      setSchools(parsedSchools);
+
+      const teachersData = await getTeachers(token!);
+      setTeachers(teachersData);
     };
     fetchData();
   }, [token]);
@@ -103,7 +110,10 @@ const Dashboard = () => {
                 <li key={index} className="p-4 bg-gray-50 border-l-4 border-blue-500 shadow rounded-md">
                   <p><strong className="text-gray-700">Name:</strong> {school.schoolName}</p>
                   <p><strong className="text-gray-700">Grade Level:</strong> {school.gradeLevel}</p>
-                  <p><strong className="text-gray-700">Subjects Needed:</strong> {school.subjectsNeeded.join(", ")}</p>
+                  <p>
+                    <strong className="text-gray-700">Subjects Needed:</strong>{" "}
+                    {school.subjectsNeeded.join(", ")}
+                  </p>
                   <p><strong className="text-gray-700">Teachers Needed:</strong> {school.numberOfTeachersNeeded}</p>
                   <p><strong className="text-gray-700">Training Type:</strong> {school.trainingType}</p>
                   <p><strong className="text-gray-700">Phone:</strong> {school.phoneNumber}</p>
